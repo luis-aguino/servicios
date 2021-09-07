@@ -43,11 +43,13 @@ a {
 	padding:0;
 }
 .header {
+	 background-color: #1c1c1c;
 }
 .header_resize {
 	margin:0 auto;
 	padding:0;
 	width:960px;
+	
 }
 .logo {
 	padding:0;
