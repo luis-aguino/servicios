@@ -69,8 +69,7 @@ h1 a, h1 a:hover {
 	color:#fff;
 	text-decoration:none;
 }
-h1 span {
-}
+
 h1 small {
 	display:block;
 	font-size:12px;
@@ -168,10 +167,7 @@ h1 small {
 	padding:12px 0 0;
 	float:left;
 }
-.content .mainbar img {
-}
-.content .mainbar img.fl {
-}
+
 .content .mainbar .article {
 	margin:0 0 32px;
 	padding:0 0 16px;
