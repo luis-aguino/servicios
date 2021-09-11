@@ -1,30 +1,33 @@
 <?php
-error_reporting(0);
-$nombre = $_POST['nombre'];
-$correo_electronico= $_POST['email'];
-$poblacion = $_POST['poblacion'];
-$sexo=$_POST['GrupoOpciones1'];
-$aficiones=$_POST['comentarios'];
-$radio= $_POST['GrupoOpciones2'];
-$opinion=$_POST['opinion'];
-$header = 'From: ' . $mail . ", de la poblacion ".$poblacion."\r\n";
-$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
-$header .= "Mime-Version: 1.0 \r\n";
-$header .= "Content-Type: text/plain";
+if(isset($_POST['email'])) {
 
-$mensaje = "Este mensaje fue enviado por " . $nombre . " \r\n";
-$mensaje .= "Su e-mail es: " . $mail . " \r\n";
-$mensaje .= "sexo" . $_POST['GrupoOpciones1'] . " \r\n";
-$mensaje .= "aficiones " . $_POST['comentarios'] . " \r\n";
-$mensaje .= "que opinas de nuestra pagina" . $_POST['GrupoOpciones2'] . " \r\n";
-$mensaje .="danos tu opinion".$_POST['opinion'] . " \r\n";
-$mensaje .= "Enviado el " . date('d/m/Y', time());
 
-$email = yhlcontadores@gmail.com;
-$asunto = 'CONSULTA';
+$email_to = "yhlcontadores@gmail.com";
+$email_subject = "Contacto desde el sitio web";
 
-mail($email, $asunto, utf8_decode($mensaje), $header);
 
-echo 'mensaje enviado correctamente';
+if(!isset($_POST['name'])
 
+!isset($_POST['email']) 
+!isset($_POST['Website']) 
+!isset($_POST['Message'])) {
+
+echo "<b>Ocurrió un error y el formulario no ha sido enviado. </b><br />";
+echo "Por favor, vuelva atrás y verifique la información ingresada<br />";
+die();
+}
+
+$email_message = "Detalles del formulario de contacto:\n\n";
+$email_message .= "Nombre: " . $_POST['name'] . "\n";
+$email_message .= "E-mail: " . $_POST['email'] . "\n";
+$email_message .= "website: " . $_POST['website'] . "\n";
+$email_message .= "message: " . $_POST['Message'] . "\n\n";
+
+$headers = 'From: '.$email_from."\r\n".
+'Reply-To: '.$email_from."\r\n" .
+'X-Mailer: PHP/' . phpversion();
+@mail($email_to, $email_subject, $email_message, $headers);
+
+echo "¡El formulario se ha enviado con éxito!";
+}
 ?>
