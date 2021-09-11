@@ -20,8 +20,8 @@ $mensaje .= "que opinas de nuestra pagina" . $_POST['GrupoOpciones2'] . " \r\n";
 $mensaje .="danos tu opinion".$_POST['opinion'] . " \r\n";
 $mensaje .= "Enviado el " . date('d/m/Y', time());
 
-$para = 'yhlcontadores@gmail.com';
-$asunto = 'Consulta';
+$para = yhlcontadores@gmail.com;
+$asunto = Consulta;
 
 mail($para, $asunto, utf8_decode($mensaje), $header);
 
