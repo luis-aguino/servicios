@@ -1,8 +1,10 @@
 <?php
 error_reporting(0);
 $nombre = $_POST['nombre'];
-$correo_electronico= $_POST['email'];
+$email= $_POST['email'];
 $opinion=$_POST['opinion'];
+$mensaje=$_POST['mensaje'];
+
 $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
 $header .= "Mime-Version: 1.0 \r\n";
 $header .= "Content-Type: text/plain";
