@@ -22,3 +22,56 @@
               </li>
             </ol>
           </form>
+
+
+
+
+
+
+          <?php
+error_reporting(0);
+$nombre = $_POST['nombre'];
+$email= $_POST['email'];
+$opinion=$_POST['opinion'];
+$mensaje=$_POST['mensaje'];
+
+$header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
+$header .= "Mime-Version: 1.0 \r\n";
+$header .= "Content-Type: text/plain";
+
+$mensaje = "Este mensaje fue enviado por " . $nombre . " \r\n";
+$mensaje .= "Su e-mail es: " . $mail . " \r\n";
+$mensaje .= "mensaje " . $_POST['mensaje'] . " \r\n";
+$mensaje .= "Enviado el " . date('d/m/Y', time());
+
+$para = yhlcontadores@gmail.com;
+$asunto = 'Consulta';
+
+mail($para, $asunto, utf8_decode($mensaje), $header);
+
+echo 'mensaje enviado correctamente';
+?>
+
+
+
+
+
+
+<form action="send.php" method="post" name="contacto" id ="contacto" >
+
+            Nombre completo <br> <input name="nombre" type="text" id="nombre"size="30" maxlength="100">
+            <br>
+            <br>
+            <br>
+            Correo electronico <br> <input name="email" type="text" id="email" onBlur="MM_validateForm('email','','NisEmail');return document.MM_returnValue" size="30" maxlength="100" >
+            <br>
+            <br>
+            <br>
+            Mensaje
+            <br>
+            <textarea cols="50" rows="5" name="mensaje" id="mensaje"></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Enviar formulario">
+            <input type="Reset" value="Borrar datos">
+            </form>

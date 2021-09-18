@@ -63,25 +63,16 @@
           
 
 
-
-          <form action="send.php" method="post" name="contacto" id ="contacto" >
-
-            Nombre completo <br> <input name="nombre" type="text" id="nombre"size="30" maxlength="100">
-            <br>
-            <br>
-            <br>
-            Correo electronico <br> <input name="email" type="text" id="email" onBlur="MM_validateForm('email','','NisEmail');return document.MM_returnValue" size="30" maxlength="100" >
-            <br>
-            <br>
-            <br>
-            Mensaje
-            <br>
-            <textarea cols="50" rows="5" name="mensaje" id="mensaje"></textarea>
-            <br>
-            <br>
-            <input type="submit" value="Enviar formulario">
-            <input type="Reset" value="Borrar datos">
-            </form>
+            <form action="enviar.php" method="post">
+              <input type="text" name="name" id="name" class="name" placeholder="NOMBRE">
+              <input type="text" name="mail" id="mail" class="email" placeholder="CORREO">
+              <input type="text" name="phone" id="subject" class="subject" placeholder="TELÉFONO">
+              <textarea name="message" class="message" placeholder="MENSAJE ... " id="message"></textarea>
+              <div class="clear"></div>
+                  <div class="col-md-8"> 
+                      <button type="submit" class="btn btn-primary">ENVIAR </button>
+</div>
+</form>
             
             
 
