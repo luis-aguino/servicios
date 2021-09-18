@@ -66,17 +66,17 @@
 
           <form action="send.php" method="post" name="contacto" id ="contacto" >
 
-            Nombre completo <br> <input name="nombre" type="text" id="nombre completo"size="30" maxlength="100">
+            Nombre completo <br> <input name="nombre" type="text" id="nombre"size="30" maxlength="100">
             <br>
             <br>
             <br>
-            Correo electronico <br> <input name="email" type="text" onBlur="MM_validateForm('email','','NisEmail');return document.MM_returnValue" size="30" maxlength="100" >
+            Correo electronico <br> <input name="email" type="text" id="email" onBlur="MM_validateForm('email','','NisEmail');return document.MM_returnValue" size="30" maxlength="100" >
             <br>
             <br>
             <br>
             Mensaje
             <br>
-            <textarea cols="50" rows="5" name="opinion"></textarea>
+            <textarea cols="50" rows="5" name="mensaje" id="mensaje"></textarea>
             <br>
             <br>
             <input type="submit" value="Enviar formulario">
