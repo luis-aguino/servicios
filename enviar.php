@@ -26,9 +26,9 @@ try {
     $mail->SMTPSecure = 'tls';                            // Activar seguridad TLS
     $mail->Port = 465;                                    // Puerto SMTP
 
-    #$mail->SMTPOptions = ['ssl'=> ['allow_self_signed' => true]];  // Descomentar si el servidor SMTP tiene un certificado autofirmado
-    #$mail->SMTPSecure = false;				// Descomentar si se requiere desactivar cifrado (se suele usar en conjunto con la siguiente línea)
-    #$mail->SMTPAutoTLS = false;			// Descomentar si se requiere desactivar completamente TLS (sin cifrado)
+    $mail->SMTPOptions = ['ssl'=> ['allow_self_signed' => true]];  // Descomentar si el servidor SMTP tiene un certificado autofirmado
+    $mail->SMTPSecure = false;				// Descomentar si se requiere desactivar cifrado (se suele usar en conjunto con la siguiente línea)
+    $mail->SMTPAutoTLS = false;			// Descomentar si se requiere desactivar completamente TLS (sin cifrado)
  
     $mail->setFrom('yhlcontadores@gmail.com');		// Mail del remitente
     $mail->addAddress('luasjaramillo759@gmail.com');     // Mail del destinatario
