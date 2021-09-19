@@ -10,10 +10,10 @@ $mail = new PHPMailer(true);
 try {
     $mail->SMTPDebug = 2;  // Sacar esta línea para no mostrar salida debug
     $mail->isSMTP();
-    $mail->Host = 'mail.midominio.com';  // Host de conexión SMTP
+    $mail->Host = 'smtp.gmail.com';  // Host de conexión SMTP
     $mail->SMTPAuth = true;
-    $mail->Username = 'remitente@midominio.com';                 // Usuario SMTP
-    $mail->Password = 'MiPa33W0rD';                           // Password SMTP
+    $mail->Username = 'yhlcontadores@gmail.com';                 // Usuario SMTP
+    $mail->Password = 'Pimitumo1';                           // Password SMTP
     $mail->SMTPSecure = 'tls';                            // Activar seguridad TLS
     $mail->Port = 587;                                    // Puerto SMTP
 
@@ -21,13 +21,13 @@ try {
     #$mail->SMTPSecure = false;				// Descomentar si se requiere desactivar cifrado (se suele usar en conjunto con la siguiente línea)
     #$mail->SMTPAutoTLS = false;			// Descomentar si se requiere desactivar completamente TLS (sin cifrado)
  
-    $mail->setFrom('remitente@midominio.com');		// Mail del remitente
-    $mail->addAddress('destinatario@gmail.com');     // Mail del destinatario
+    $mail->setFrom('yhlcontadores@gmail.com');		// Mail del remitente
+    $mail->addAddress('luasjaramillo759@gmail.com');     // Mail del destinatario
  
     $mail->isHTML(true);
-    $mail->Subject = 'Contacto desde formulario';  // Asunto del mensaje
-    $mail->Body    = 'Este es el contenido del mensaje <b>en negrita!</b>';    // Contenido del mensaje (acepta HTML)
-    $mail->AltBody = 'Este es el contenido del mensaje en texto plano';    // Contenido del mensaje alternativo (texto plano)
+    $mail->Subject = 'Ref; Consulta';  // Asunto del mensaje
+    $mail->Body    = 'Gracias por contatarnos <b>YHLCONTADORES</b>';    // Contenido del mensaje (acepta HTML)
+    $mail->AltBody = 'Estudiaremos la consulta y nos comunicaremos a la brevedad del caso.';    // Contenido del mensaje alternativo (texto plano)
  
     $mail->send();
     echo 'El mensaje ha sido enviado';
