@@ -15,7 +15,7 @@ try {
     $mail->Username = 'yhlcontadores@gmail.com';                 // Usuario SMTP
     $mail->Password = 'Pimitumo1';                           // Password SMTP
     $mail->SMTPSecure = 'tls';                            // Activar seguridad TLS
-    $mail->Port = 587;                                    // Puerto SMTP
+    $mail->Port = 465;                                    // Puerto SMTP
 
     #$mail->SMTPOptions = ['ssl'=> ['allow_self_signed' => true]];  // Descomentar si el servidor SMTP tiene un certificado autofirmado
     #$mail->SMTPSecure = false;				// Descomentar si se requiere desactivar cifrado (se suele usar en conjunto con la siguiente línea)
