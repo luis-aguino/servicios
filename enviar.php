@@ -56,7 +56,13 @@ require 'PHPMailer/src/PHPMailer.php';
 require 'PHPMailer/src/SMTP.php';
  
 $mail = new PHPMailer(true);
-
+$mail->SMTPOptions = array(
+    'ssl' => array(
+    'verify_peer' => false,
+    'verify_peer_name' => false,
+    'allow_self_signed' => true
+    )
+);
 error_reporting(0);
 $nombre = $_POST['nombre'];
 $email= $_POST['email'];
