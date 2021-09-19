@@ -37,33 +37,7 @@ try {
     $mail->Subject = 'Ref; Consulta';  // Asunto del mensaje
     $mail->Body    = 'Gracias por contatarnos <b>YHLCONTADORES</b>';    // Contenido del mensaje (acepta HTML)
     $mail->AltBody = 'Estudiaremos la consulta y nos comunicaremos a la brevedad del caso.';    // Contenido del mensaje alternativo (texto plano)
- 
-    $mail->send();
-    echo 'El mensaje ha sido enviado';
-} catch (Exception $e) {
-    echo 'El mensaje no se ha podido enviar, error: ', $mail->ErrorInfo;
-}
-
-
-
-<?php
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
- 
-$mail = new PHPMailer(true);
-$mail->SMTPOptions = array(
-    'ssl' => array(
-    'verify_peer' => false,
-    'verify_peer_name' => false,
-    'allow_self_signed' => true
-    )
-);
-error_reporting(0);
+ error_reporting(0);
 $nombre = $_POST['nombre'];
 $email= $_POST['email'];
 $opinion=$_POST['opinion'];
