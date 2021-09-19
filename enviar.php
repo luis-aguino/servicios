@@ -1,24 +1,24 @@
-     
 <?php
-$name = $_POST['name'];
-$mail = $_POST['mail'];
-$message = $_POST['message'];
-
-$header = 'From: ' . $mail . " \r\n";
+ error_reporting(0);
+ include("PHP/src/PHPMailer.php")
+$email = new PHPMailler ();
+$nombre = $_POST['nombre'];
+$email= $_POST['email'];
+$opinion=$_POST['opinion'];
+$mensaje=$_POST['mensaje'];
 $header .= "X-Mailer: PHP/" . phpversion() . " \r\n";
 $header .= "Mime-Version: 1.0 \r\n";
 $header .= "Content-Type: text/plain";
 
-$message = "Este mensaje fue enviado por: " . $name . " \r\n";
-$message .= "Su e-mail es: " . $mail . " \r\n";
+$mensaje = "Este mensaje fue enviado por " . $nombre . " \r\n";
+$mensaje .= "Su e-mail es: " . $mail . " \r\n";
+$mensaje .= "mensaje " . $_POST['mensaje'] . " \r\n";
+$mensaje .= "Enviado el " . date('d/m/Y', time());
 
-$message .= "Mensaje: " . $_POST['message'] . " \r\n";
-$message .= "Enviado el: " . date('d/m/Y', time());
+$para = yhlcontadores@gmail.com;
+$asunto = 'Consulta';
 
-$para = 'yhlcontadores@gmail.com';
-$asunto = 'CONSULTA';
+mail($para, $asunto, utf8_decode($mensaje);
 
-mail($para, $asunto, utf8_decode($message), $header);
-
-header("Location:index.html");
+echo 'mensaje enviado correctamente';
 ?>
