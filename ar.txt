@@ -75,3 +75,24 @@ echo 'mensaje enviado correctamente';
             <input type="submit" value="Enviar formulario">
             <input type="Reset" value="Borrar datos">
             </form>
+
+
+
+            <form action="enviar.php" method="post">
+
+            Nombre completo <br> <input name="nombre" type="text" id="nombre"size="30" maxlength="100">
+            <br>
+            <br>
+            <br>
+            Correo electronico <br> <input name="email" type="text" id="email" size="30" maxlength="100" >
+            <br>
+            <br>
+            <br>
+            Mensaje
+            <br>
+            <textarea cols="50" rows="5" name="mensaje" id="mensaje"></textarea>
+            <br>
+            <br>
+            <input type="submit" value="Enviar formulario">
+            <input type="Reset" value="Borrar datos">
+            </form>
