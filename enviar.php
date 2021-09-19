@@ -22,7 +22,7 @@ try {
     $mail->Host = 'smtp.gmail.com';  // Host de conexión SMTP
     $mail->SMTPAuth = true;
     $mail->Username = 'yhlcontadores@gmail.com';                 // Usuario SMTP
-    $mail->Password = 'Pimitumo1';                           // Password SMTP
+    $mail->Password = '';                           // Password SMTP
     $mail->SMTPSecure = 'tls';                            // Activar seguridad TLS
     $mail->Port = 465;                                    // Puerto SMTP
 
